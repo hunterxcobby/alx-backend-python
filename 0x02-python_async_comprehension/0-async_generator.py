@@ -12,7 +12,7 @@ import asyncio
 from typing import Generator
 
 
-async def async_generator() -> Generator[float, None, None]:
+async def async_generator() -> Generator[float, None, None]: # type: ignore
     """Coroutine that loops 10 times, each time asynchronously wait 1 second,
     then yield a random number between 0 and 10.
     """
