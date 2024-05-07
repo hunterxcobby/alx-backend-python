@@ -7,8 +7,8 @@ each time asynchronously wait 1 second,
 then yield a random number between 0 and 10. Use the random module.
 """
 
-import random
 import asyncio
+import random
 from typing import Generator
 
 
@@ -17,7 +17,5 @@ async def async_generator() -> Generator[float, None, None]: # type: ignore
     then yield a random number between 0 and 10.
     """
     for i in range(10):
-        # Simulate an asynchronous operation using asyncio.sleep
         await asyncio.sleep(1)
-        # Yield the current value asynchronously
-        yield random.uniform(i, 10)
+        yield random.uniform(0, 10)
